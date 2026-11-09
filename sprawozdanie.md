@@ -29,7 +29,7 @@ Celem ćwiczenia jest porównanie czterech architektur sieci neuronowych (Simple
 - **Modele rekurencyjne (SimpleRNN, LSTM, GRU):** Przetwarzają sekwencję krok po kroku i przekazują wyłącznie **ostatni stan ukryty** $h_L$ do warstwy liniowej (`nn.Linear(hidden, 1)`).
 - **Model splotowy (Conv1D):** Stos warstw splotowych z dopełnieniem symetrycznym (`padding = dilation`) zachowującym długość sekwencji. Wyjście podlega globalnemu uśrednianiu w czasie (`mean(dim=2)`), po czym trafia do warstwy liniowej.
 - **Parametry treningu:** $N_{train} = 4000$, $N_{test} = 800$, epoki = 30, batch = 128, optymalizator Adam ($lr = 0{,}005$), obcinanie normy gradientu do $1{,}0$ (`clip_grad_norm_`). Zbiory danych wygenerowano raz i współdzielono między modelami danej długości.
-
+### Link do Colab'a: https://github.com/bartoszpaluda/dlugie_sekwencje_lstm_gru
 ---
 
 ## 3. Wyniki
